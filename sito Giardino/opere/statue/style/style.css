@@ -1,0 +1,562 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #C40018;
+    overflow-x: hidden;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    font-family: Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif; 
+    color: white;
+    background-color: rgb(41, 39, 37)
+
+}
+
+.logo{
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    width: 45%;
+}
+
+.nav-links li{
+    list-style: none;
+}
+
+.nav-links li :hover{
+    font-size: 28px;
+}
+
+.nav-links a{
+    text-decoration: none;
+    letter-spacing: 2px;
+    color: white;
+    font-weight: 600;
+    font-size: 25px;
+    transition: font-size 1s;
+}
+
+.nav-links li a img{
+    max-width: 40px;
+}
+
+.burger{
+    display: none;
+    cursor: pointer;
+}
+
+.burger div{
+    width: 40px;
+    height: 4px;
+    background-color: white;
+    margin: 7px;
+}
+
+
+
+@media screen and (max-width: 960px){
+
+    
+    .nav-links{
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color: rgb(41, 39, 37);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 40%;
+        transform: translateX(100%); 
+        transition: transform 0.5s ease-in; 
+        z-index: 1;
+    }
+
+    .nav-links li{
+        opacity: 0;
+    }
+
+    .burger{
+        display: block;
+    }
+}
+
+
+.nav-active{
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+    
+}
+
+/* -- BG -- */
+
+header .hp {
+    background-image: url("../images/bg1HP.png");
+    
+    min-height: 1000px; 
+  
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+/* -- TEXT LANDING PAGE -- */
+
+
+.hp .text{
+    position: relative;
+    float: left;
+    top: 10vh;
+    left: 8%;
+    width: 44%;
+}
+
+.text .title1, .title2{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 5rem;
+    letter-spacing: 8px;
+    color:white;
+    opacity: 85%;
+    z-index: 0;
+
+    animation: fadeText 2s ease-in 0.2s 1;
+}
+
+
+.text .parag {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.4rem;
+    letter-spacing: 4px;
+    color:white;
+    opacity: 85%;
+    z-index: 0;
+    width: 70%;
+    padding-top: 10px;
+
+    animation: fadeText 3s ease-in 0.2s 1;
+}
+
+.leggi-di-piu{
+    position: relative;
+    float: left;
+    top: 10vh;
+    left: 10%;
+    width: 44%;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.4rem;
+    letter-spacing: 4px;
+    color:white;
+    opacity: 85%;
+    z-index: 0;
+    width: 70%;
+    padding-top: 10px;
+    padding-bottom: 20px;
+
+}
+
+
+/* -- IMAGES SLIDER -- */
+
+.slider{
+    position: relative;
+    float: right;
+    right: 8%;
+    top: 15vh;
+    width: 40%;
+    height: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.slides{
+width: 500%;
+height: 500px;
+display: flex;
+}
+
+.slides input{
+display: none;
+}
+
+.slide{
+width: 20%;
+transition: 2s;
+}
+
+.slide img{
+width: 100%;
+height: 100%;
+}
+  
+/* manual slide navigation*/
+
+.navigation-manual{
+position: absolute;
+width: 700px;
+margin-top: -40px;
+display: flex;
+justify-content: center;
+}
+
+.manual-btn{
+border: 2px solid rgb(41, 39, 37);
+padding: 5px;
+border-radius: 10px;
+cursor: pointer;
+transition: 1s;
+}
+
+.manual-btn:not(:last-child){
+margin-right: 40px;
+}
+
+.manual-btn:hover{
+background: rgb(41, 39, 37);
+}
+
+#radio1:checked ~ .first{
+margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+margin-left: -20%;
+}
+
+#radio3:checked ~ .first{
+margin-left: -40%;
+}
+  
+  
+/* automatic slide navigation */
+
+.navigation-auto{
+position: absolute;
+display: flex;
+width: 700px;
+justify-content: center;
+margin-top: 460px;
+}
+
+.navigation-auto div{
+border: 2px solid rgb(41, 39, 37);
+padding: 5px;
+border-radius: 10px;
+transition: 1s;
+}
+
+.navigation-auto div:not(:last-child){
+margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1{
+background: rgb(41, 39, 37);
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2{
+background: rgb(41, 39, 37);
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3{
+background: rgb(41, 39, 37);
+}
+
+/* SECONDARY PAGE(OPERE) */
+
+
+.subtitle p{
+    position: relative;
+    text-align: center;
+    font-family: calisthenics;
+    letter-spacing: 10px;
+    width: 100%;
+    font-size: 700%;
+    color:white;
+    opacity: 75%;
+    z-index: 0;
+    font-family: 'Ubuntu', sans-serif;
+    display: inline-block;
+}
+
+/* IMMAGINI */
+
+.imgs img{
+    border-radius: 10px;
+    width: 70%;
+}
+
+.img1{
+    position: relative;
+    float: left;
+    width: 40%;
+    height: 70%;
+}
+
+.img2{
+    position: relative;
+    float: right;
+    width: 40%;
+    height: 70%;
+}
+
+.img3{
+    position: relative;
+    float: left;
+    width: 40%;
+    height: 70%;
+}
+
+.img4{
+    position: relative;
+    float: right;
+    width: 40%;
+    height: 70%;
+}
+
+.img1, .img2{
+    padding-top: 5%;
+    display: inline-block;
+}
+
+.img3, .img4{
+    padding-top: 5%;
+    padding-bottom: 8%;
+    display: inline-block;
+}
+
+/* HOVER EFFECT */
+
+.img1, .img2, .img3, .img4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor:pointer;
+}
+
+
+.img_card{
+    width:100%;
+    transition:all 0.3s ease-in-out;
+}
+
+.img__title{
+    position: absolute;
+    font-size:30px;
+    color:white;
+    font-family: 'Ubuntu', sans-serif;
+    z-index:10;
+    filter:opacity(0);
+    transition: all 0.3s ease-in-out;
+}
+
+.img__description{
+    position: absolute;
+    font-size:10vm;
+    color:white;
+    margin-top:30px;
+    font-family: 'Ubuntu', sans-serif;
+    z-index:10;
+    filter:opacity(0);
+    transition: all 0.3s ease-in-out;
+}
+
+.img1:hover .img_card, .img2:hover .img_card, .img3:hover .img_card, .img4:hover .img_card{
+    transform:scale(1.1);
+    filter:brightness(0.7);
+}
+
+.img1:hover .img__title, .img2:hover .img__title, .img3:hover .img__title, .img4:hover .img__title, .img1:hover .img__description, .img2:hover .img__description, .img3:hover .img__description, .img4:hover .img__description{
+    filter:opacity(1);
+}
+
+/* -- FOOTER CAMBIO OPERA -- */
+
+footer .cambio-opera h3{
+    top: 15vh;
+    letter-spacing: 2px;
+    
+    position: relative;
+    text-align: center;
+    width: 100%;
+    font-size: 1.8rem;
+    font-family: 'Ubuntu', sans-serif;
+    display: inline-block;
+
+    transition: font-size ease-in 0.3s;
+
+    padding-bottom: 20px;
+}
+
+
+footer .cambio-opera a {
+    text-decoration: none;
+    color:rgb(41, 39, 37);
+}
+
+footer .cambio-opera a :hover{
+    font-size: 2rem;
+}
+
+/* -- ANIMATION -- */
+
+@keyframes fadeText {
+    0%{
+        opacity: 0%;
+    }100%{
+        opacity: 100%;
+    }
+}
+
+/* -- DIMENSION -- */
+
+@media screen and (max-width: 1750px){
+    .nav-links a{
+        font-size: 26px;
+    }
+
+    .logo{
+        font-size: 26px;
+    }
+
+    .hp .text{
+        left: 10vh;
+    }
+
+    .text .title1{
+        font-size: 4.5rem;
+    }
+
+    .text .title2{
+        font-size: 4.5rem;
+    }
+
+    .subtitle p{
+        font-size: 500%;
+    }
+}
+
+@media screen and (max-width: 1000px){
+
+    .nav-links a{
+        font-size: 24px;
+    }
+
+    .logo{
+        font-size: 24px;
+    }
+
+
+    .text .title1{
+        font-size: 4rem;
+    }
+
+    .text .title2{
+        font-size: 4rem;
+    }
+
+    .subtitle p{
+        font-size: 350%;
+    }
+
+}
+
+@media screen and (max-width: 900px){
+    .nav-links a{
+        font-size: 18px;
+    }
+
+    .logo{
+        font-size: 18px;
+    }
+
+    .hp .text{
+        left: 9vh;
+        width: 100%;
+    }
+
+    .text .title1{
+        font-size: 3rem;
+    }
+
+    .text .title2{
+        font-size: 3rem;
+    }
+    
+    .slider{
+        float: none;
+        width: 70%;
+        height: 350px;
+        left: 9vh;
+    }
+    
+    .hp .text{
+        float: none;
+    }
+
+    .subtitle p{
+        font-size: 250%;
+    }
+}
+
+/* -- TELEPHONE -- */
+
+@media screen and (max-width: 500px){
+    .nav-links a{
+        font-size: 10px;
+    }
+
+    .logo{
+        font-size: 15px;
+    }
+
+    .hp .text{
+        left: 5vh;
+    }
+    .text .title1{
+        font-size: 2rem;
+    }
+
+    .text .title2{
+        font-size: 2rem;
+    }
+
+    .text .parag{
+        font-size: 15px;
+        width: 80%;
+    }
+
+    
+    .slider{
+        width: 70%;
+        height: 400px;
+        left: 5.3vh;
+    }
+}

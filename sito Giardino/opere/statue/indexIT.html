@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viale delle Statue</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="style/style.css"/>
+
+    <script src="script/audio.js"></script>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <h4>VIALE DELLE STATUE</h4>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="../../homepage/indexIT.html">Homepage</a>
+            </li>
+            <li>
+                <a href="#LeggiDiPiu">Leggi_di_più</a>
+            </li>
+            <li>
+                <a href="indexEN.html">EN/IT</a>
+            </li>
+            <li>
+                <a href="#" onclick="AudioIT()"><img src="images/play-pause.png" alt="audio"></a>
+            </li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    
+    <header>
+        <div class="hp">
+                <div class="text">
+                    <h1 class="title1">LE</h1>
+                    <h1 class="title2">STATUE</h1> 
+                    <p class="parag">
+                        Le statue del Giardino rappresentano, secondo il documento d'archivio rinvenuto da Daniele Santambrogio', personaggi della mitologia greco-romana e della letteratura 
+                        cinquecentesca, le cui vicende fanno pensare che siano state scelte dal committente sulla base  di uno specifico intento pedagogico-morale: occorre sfuggire al vizio e 
+                        seguire invece la via della virtù.  Non sappiamo se l'assetto attuale dell'intero complesso corrisponda al progetto originario, ma resta inteso che alcune statue sono 
+                        attualmente collocate fuori posto.  
+                    </p>
+                </div>
+                <!-- image slider -->
+                <div class="slider">
+                    <div class="slides">
+                        <!-- radio buttons -->
+                        <input type="radio" name="radio-btn" id="radio1">
+                        <input type="radio" name="radio-btn" id="radio2">
+                        <input type="radio" name="radio-btn" id="radio3">
+                        
+                        <!-- slide images -->
+                        <div class="slide first">
+                            <img src="images/img1.png" alt="Statue">
+                        </div>
+                        <div class="slide">
+                            <img src="images/img2.png" alt="Statue">
+                        </div>
+                        <div class="slide">
+                            <img src="images/img3.png" alt="Statue">
+                        </div>
+                        <!-- automatic navigation -->
+                        <div class="navigation-auto">
+                            <div class="auto-btn1"></div>
+                            <div class="auto-btn2"></div>
+                            <div class="auto-btn3"></div>
+                        </div>
+                    </div>
+                    <!-- manual navigation -->
+                    <div class="navigation-manual">
+                        <label for="radio1" class="manual-btn"></label>
+                        <label for="radio2" class="manual-btn"></label>
+                        <label for="radio3" class="manual-btn"></label>
+                    </div>
+                </div>
+        </div>
+    </header>
+
+    <!-- LEGGI DI PIU -->
+    <section>
+        <div class="leggi-di-piu" id="LeggiDiPiu">
+            <h3>PER SAPERNE DI PIU'</h3><br>
+            <p>
+                All'angolo sud-est del Palazzo, la statua senza testa, in cattive condizioni, sembra rappresentare il Primaverdo, poiché sotto il braccio destro si intravede ancora quello 
+                che sembra un cesto di fiori.  All'angolo nord-est, la Statua di Circe.  Entrambi non sono al posto giusto, capirete in seguito il motivo Volgendo le spalle al Palazzo, 
+                sul lato sud si vede quella che potrebbe essere la statua di Venere, ai suoi piedi, tra l'altro, sono scolpiti dei fiori che sembrano rose  canini, come quelli tenuti dalla 
+                famosa Venere di Urbino di Tiziano.  Sul lato nord la statua dell'Autunno.  Resta inteso che la statua della Primavera dovrebbe essere al posto di quella di Venere, 
+                poiché nell'area della Fontana Barocca, in corrispondenza di questa statua c'è quella dell'Estate e un tempo c'era anche quella dell'Inverno, corrispondente  alla 
+                statua dell'Autunno: le quattro stagioni, che scandiscono il trascorrere della nostra esistenza.  
+                Proseguendo, sempre sul lato sud, si notano le statue di Ruggero e della maga Alcina, due personaggi dell'Orlando Furioso di L. Ariosto.
+                Sul lato nord la statua di Ulisse;  si capisce che, per analogia con la coppia precedente, Circe doveva stare davanti ad Ulisse, 
+                mentre ora c'è la statua della Siringa.  
+                Tornando lungo il lato sud, si possono vedere altre due statue, quella della Gloria e, di fronte, quella di Euristeo, il re che sottopose Ercole alle dodici fatiche.  
+                In corrispondenza di queste ultime due statue, dalla parte opposta, ce n'erano altre due. 
+                Proseguendo s'incontra una statua maschile che calpesta una testa di un cinghiale: è la statua del Cacciatore. In esso sembra di poter riconoscere il bel Meleagro, 
+                eroe greco, figlio del re di Calidone, Eneo, e di Altea.
+                Proseguendo oltre, sul lato nord, si presenta subito una statua imponente, quella di Ercole, mitico eroe, famoso non solo 
+                per le sua forza fisica, ma anche perché giovinetto, trovandosi a dover sceglier se percorrere la via del vizio o quella della virtù, scelse la virtù! 
+                In corrispondenza di Ercole, lungo il lato opposto, I'altrettanto imponente statua di in cui si riconoscono tutti
+                gli attributi del dio Apollo: il disco solare sulla corazza, l'arco e la faretra sulla schiena e una cetra. 
+                Proseguendo il cammino, sempre sul lato sud, 
+                ai margini del laghetto annesso alla Fontana barocca, si arriva alla statua del Valore, un soldato, che nella mano sinistra tiene un libro, mentre colla destra sorregge la spada. 
+                Questa statua é fronteggiata, anche se a una certa distanza, dalla statua di una figura femminile, che porta una corona d'alloro sulla testa, il braccio destro sollevato
+                con la mano nell'atto di respingere qualcuno, mentre porta al braccio sinistro un bracciale: Dafne. 
+                Dalla parte opposta a quella del Valore, si trova la statua di una donna coi seni scoperti, 
+                nell'atto di pettinarsi! E la Lascivia. Di fronte ad essa, sempre ad una certa distanza, la statua di una altra donna a seni nudi, coi capelli raccolti, che posa in un 
+                atteggiamento di accoglienza Questa volta si tratta di Clizia.
+                Proseguendo, lungo il lato sud, sul fianco della Fontana barocca, si vede una statua in cattivo stato di conservazione! Reca in braccio un covone di spighe, 
+                è in linea con la statua che si trova al posto della Primavera, all'inizio del giardino, si tratta dell'Estate. Di fianco ad essa una statua con l'iscrizione ancora leggibile: 
+                Locio ovvero L'Ozio. Anche all'epoca in cui furono posizionate queste statue, l'estate doveva essere un periodo di riposo per alcuni! Dalla parte opposta, una statua acefala, 
+                con l'iscrizione ben leggibile: Fatica. La statua che le stava di fianco, purtroppo, non c'è più, ma rappresentava L'Inverno.
+                 Le statue delle quattro stagioni 
+                probabilmente rappresentano il ciclo continuo dell'esistenza umana e racchiudono la parabola della vita: I'uomo, chiamato a vivere perseguendo il bene morale, 
+                la virtù, può essere ostacolato dall'insorgere di varie passioni e cadere in preda ai vizi che lo distoglierebbero dal proprio fine. Anche personaggi di rilievo, come 
+                Ercole che fu sottomesso a Onfale, possono sbagliare, ma esiste, grazie al Pentimento, la possibilità di riprendere il cammino interrotto. La pienezza della vita non 
+                si raggiunge assecondando vizi e passioni corruttrici, frutto del cieco egoismo, ma perseguendo un'esistenza moralmente retta e virtuosa, seguendo la via luminosa del bene. 
+                Questa interpretazione all'insegna dell'ammaestramento morale, viene confortata da una notazione presente nel testamento di Bartolomeo III Arese, laddove, 
+                esortando la moglie Lucrezia e la figlia Giulia ad avere massima cura del Palazzo di Cesano e del Giardino, affermava: Voglio infatti che godano della bellezza di 
+                questo palazzo e del giardino per rinfrancare gli animi e allontanarli dai vizi, e che colà traggano svago con gli amici e i parenti ricordando sempre che tutte le cose
+                umane sono caduche. 
+            </p>
+        </div>
+
+    </section>
+    
+    <footer>
+        <div class="cambio-opera">
+            <a href="../altro/indexIT.html"><h3>OPERA SUCCESSIVA</h3></a>
+            <a href="../fontana/indexIT.html"><h3>OPERA PRECEDENTE</h3></a>
+        </div>
+    </footer>
+    
+    <script src="script/script.js"></script>
+    
+    
+</body>
+</html>
+
+

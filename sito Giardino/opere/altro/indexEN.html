@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Il resto del Giardino</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="style/style.css"/>
+
+    <script src="script/audio.js"></script>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <h4>THE GARDEN</h4>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="../../homepage/indexEN.html">Homepage</a>
+            </li>
+            <li>
+                <a href="#ReadMore">Read more</a>
+            </li>
+            <li>
+                <a href="indexIT.html">EN/IT</a>
+            </li>
+            <li>
+                <a href="#" onclick="AudioEN()"><img src="images/play-pause.png" alt="audio"></a>
+            </li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    
+    <header>
+        <div class="hp">
+                <div class="text">
+                    <h1 class="title1">THE</h1>
+                    <h1 class="title2">GARDEN</h1>
+                    <p class="parag">
+                        The park, due to is vastness, also includes a large park, a pond, the Baroque fountain and an aviary.
+                    </p>
+                </div>
+                <!-- image slider -->
+                <div class="slider">
+                    <div class="slides">
+                        <!-- radio buttons -->
+                        <input type="radio" name="radio-btn" id="radio1">
+                        <input type="radio" name="radio-btn" id="radio2">
+                        <input type="radio" name="radio-btn" id="radio3">
+                        <input type="radio" name="radio-btn" id="radio4">
+                        
+                        <!-- slide images -->
+                        <div class="slide first">
+                            <img src="images/img1.jpg" alt="Garden">
+                        </div>
+                        <div class="slide">
+                            <img src="images/img2.jpg" alt="Garden">
+                        </div>
+                        <div class="slide">
+                            <img src="images/img3.jpg" alt="Pond">
+                        </div>
+                        <div class="slide">
+                            <img src="images/img4.jpg" alt="Wall">
+                        </div>
+                        <!-- automatic navigation -->
+                        <div class="navigation-auto">
+                            <div class="auto-btn1"></div>
+                            <div class="auto-btn2"></div>
+                            <div class="auto-btn3"></div>
+                            <div class="auto-btn4"></div>
+                        </div>
+                    </div>
+                    <!-- manual navigation -->
+                    <div class="navigation-manual">
+                        <label for="radio1" class="manual-btn"></label>
+                        <label for="radio2" class="manual-btn"></label>
+                        <label for="radio3" class="manual-btn"></label>
+                        <label for="radio4" class="manual-btn"></label>
+                    </div>
+                </div>
+        </div>
+    </header>
+
+    <!-- LEGGI DI PIU -->
+    <section>
+        <div class="opere">
+
+
+            <div class="imgs" id="ReadMore">
+                <!-- Immagine 1 -->
+                <div class="img1">
+                    <img class="img_card" src="images/voliera.png" alt="Aviary">
+                        <p class="img__title">
+                            Aviary Pavilion<br><br>
+                        </p>
+                </div>
+                <!-- Immagine 2 -->
+                <div class="img2"> 
+                    <img class="img_card" src="images/fontana.png" alt="Baroque Fountain">
+                    <div class="img__title">
+                        Baroque Fountain<br><br>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+            <div class="cambio-opera">
+                <a href="../statue/indexEN.html"><h3>PREVIOUS WORK</h3></a>
+            </div>
+        </footer>
+    
+    <script src="script/script.js"></script>
+    
+    
+</body>
+</html>
+
+

@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #FF6107;
+    overflow-x: hidden;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    font-family: Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif; 
+    color: white;
+    background-color: rgb(41, 39, 37)
+
+}
+
+.logo{
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    width: 45%;
+}
+
+.nav-links li{
+    list-style: none;
+}
+
+.nav-links li :hover{
+    font-size: 28px;
+}
+
+.nav-links a{
+    text-decoration: none;
+    letter-spacing: 2px;
+    color: white;
+    font-weight: 600;
+    font-size: 25px;
+    transition: font-size 1s;
+}
+
+.nav-links li a img{
+    max-width: 40px;
+}
+
+.burger{
+    display: none;
+    cursor: pointer;
+}
+
+.burger div{
+    width: 40px;
+    height: 4px;
+    background-color: white;
+    margin: 7px;
+}
+
+
+
+@media screen and (max-width: 960px){
+
+    
+    .nav-links{
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color: rgb(41, 39, 37);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 40%;
+        transform: translateX(100%); 
+        transition: transform 0.5s ease-in; 
+        z-index: 1;
+    }
+
+    .nav-links li{
+        opacity: 0;
+    }
+
+    .burger{
+        display: block;
+    }
+}
+
+
+.nav-active{
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+    
+}
+
+
+/* -- TEXT LANDING PAGE -- */
+
+
+.text{
+    position: relative;
+    float: left;
+    top: 10vh;
+    left: 8%;
+    width: 100%;
+}
+
+.text .title1, .title2{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 5rem;
+    letter-spacing: 8px;
+    color:white;
+    opacity: 85%;
+    z-index: 0;
+
+    animation: fadeText 2s ease-in 0.2s 1;
+}
+
+
+.text .parag {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.4rem;
+    letter-spacing: 4px;
+    color:white;
+    opacity: 85%;
+    z-index: 0;
+    width: 80%;
+    padding-top: 10px;
+
+    animation: fadeText 3s ease-in 0.2s 1;
+}
+
+
+/* -- FOOTER CAMBIO OPERA -- */
+
+footer .cambio-opera h3{
+    top: 15vh;
+    letter-spacing: 2px;
+    
+    position: relative;
+    text-align: center;
+    width: 100%;
+    font-size: 1.8rem;
+    font-family: 'Ubuntu', sans-serif;
+    display: inline-block;
+
+    transition: font-size ease-in 0.3s;
+
+    padding-bottom: 20px;
+}
+
+
+footer .cambio-opera a {
+    text-decoration: none;
+    color:rgb(41, 39, 37);
+}
+
+footer .cambio-opera a :hover{
+    font-size: 2rem;
+}
+
+/* -- ANIMATION -- */
+
+@keyframes fadeText {
+    0%{
+        opacity: 0%;
+    }100%{
+        opacity: 100%;
+    }
+}
+
+/* -- DIMENSION -- */
+
+@media screen and (max-width: 1750px){
+    .nav-links a{
+        font-size: 26px;
+    }
+
+    .logo{
+        font-size: 26px;
+    }
+
+    .text{
+        left: 10vh;
+    }
+
+    .text .title1{
+        font-size: 4.5rem;
+    }
+
+    .text .title2{
+        font-size: 4.5rem;
+    }
+    
+    footer .cambio-opera h3{
+        font-size: 1.6rem;
+    }
+
+    footer .cambio-opera a :hover{
+        font-size: 1.8rem;
+    }
+
+}
+
+@media screen and (max-width: 1000px){
+
+    .nav-links a{
+        font-size: 24px;
+    }
+
+    .logo{
+        font-size: 24px;
+    }
+
+
+    .text .title1{
+        font-size: 4rem;
+    }
+
+    .text .title2{
+        font-size: 4rem;
+    }
+    
+    footer .cambio-opera h3{
+        font-size: 1.4rem;
+    }
+
+    footer .cambio-opera a :hover{
+        font-size: 1.6rem;
+    }
+
+}
+
+@media screen and (max-width: 900px){
+    .nav-links a{
+        font-size: 18px;
+    }
+
+    .logo{
+        font-size: 18px;
+    }
+
+    .text{
+        left: 9vh;
+        width: 100%;
+        float: none;
+    }
+
+    .text .title1, .title2{
+        font-size: 3rem;
+    }
+    
+    footer .cambio-opera h3{
+        font-size: 1.2rem;
+    }
+
+    footer .cambio-opera a :hover{
+        font-size: 1.4rem;
+    }
+}
+
+/* -- TELEPHONE -- */
+
+@media screen and (max-width: 500px){
+    .nav-links a, .logo{
+        font-size: 15px;
+    }
+
+    .text{
+        left: 5vh;
+    }
+    .text .title1{
+        font-size: 2rem;
+    }
+
+    .text .title2{
+        font-size: 2rem;
+    }
+
+    .text .parag{
+        font-size: 15px;
+        width: 80%;
+    }
+    
+    footer .cambio-opera h3{
+        font-size: 1rem;
+    }
+
+    footer .cambio-opera a :hover{
+        font-size: 1.2rem;
+    }
+}
